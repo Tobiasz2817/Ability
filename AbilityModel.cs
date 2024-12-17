@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using CoreUtility.Extensions;
-using GameZone.Storex;
+//using Storex;
 using UnityEngine;
 
 namespace Ability {
@@ -39,7 +39,7 @@ namespace Ability {
             Abilities.FirstOrDefault((ab) => ab.Ability.GetType() == abilityType);
 
         async void LoadAbilities(AbilityData[] bootAbilities) {
-            var abilities = new AbilityData[AbilitiesCore.Config.AbilitiesCount];
+            /*var abilities = new AbilityData[AbilitiesCore.Config.AbilitiesCount];
             
             var data = StorexVault.Load<AbilitiesData>(AbilitiesFileName);
             if (data.AbilitiesIds == null || data.AbilitiesIds.Length <= 0) {
@@ -56,11 +56,11 @@ namespace Ability {
                 Where((abilityData) => data.AbilitiesIds.Contains(abilityData.Id)).
                 ToArray();
 
-            Abilities = abilities.CopySubset(allAbilities);
+            Abilities = abilities.CopySubset(allAbilities);*/
         }
 
-        void SaveAbilities() =>
-            StorexVault.Save(new AbilitiesData { AbilitiesIds = Abilities.Select((data) => data.Id).Where((id) => id != 0).ToArray() }, AbilitiesFileName);
+        void SaveAbilities() { }
+                //StorexVault.Save(new AbilitiesData { AbilitiesIds = Abilities.Select((data) => data.Id).Where((id) => id != 0).ToArray() }, AbilitiesFileName);
     }
 
     [Serializable]
