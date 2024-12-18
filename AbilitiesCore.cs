@@ -7,6 +7,7 @@ using System;
 namespace Ability {
     internal static class AbilitiesCore
     {
+        // TODO: change to editor inspector settings
         internal static AbilityConfig Config;
         internal static AbilityData[] Abilities;
         
@@ -25,14 +26,7 @@ namespace Ability {
                 return Abilities;
             
             var config = abilityConfig ?? Config;
-            if (config.PathList == null || config.PathList.Length == 0) {
-#if UNITY_EDITOR
-                Debug.LogWarning("Abilities search path list is empty. Fill the path in AbilityConfig");
-#endif
-                return Abilities;
-            }
-            
-            var abilities = (await AddressableLoad.Import<AbilityData>(config.SearchType, Config.LabelKey)).ToArray();
+            var abilities = (await AddressableLoad.Import<AbilityData>(SearchType.Value, config.LabelKey)).ToArray();
             SortAbilities(ref abilities);
 
             Abilities = abilities;
