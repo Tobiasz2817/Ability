@@ -34,7 +34,12 @@ namespace Ability {
             while (_model.Abilities == null) 
                 await Task.Yield();
             
-            _model.Abilities.ForEach((ability, index) => _view.EquipAbility(index, ability));
+            _model.Abilities.ForEach((ability, index) => {
+                if (ability.Sprite == null)
+                    return;
+                
+                _view.EquipAbility(index, ability);
+            });
         }
         
         void SwitchAbility(int index, AbilityData data) =>

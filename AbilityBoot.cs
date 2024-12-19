@@ -10,10 +10,10 @@ namespace Ability {
         public AbilityDataScriptableObject[] _bootData;
         
         void Awake() {
-            /*var abilities = _bootData.Select((data) => data.Data).ToArray();
+            var abilities = _bootData.Select((data) => data.Data).ToArray();
             
             _model = new AbilityModel(abilities);
-            _controller = new AbilityController(_view, _model);*/
+            _controller = new AbilityController(_view, _model);
         }
     }
 }
