@@ -1,16 +1,20 @@
 {
     "name": "Ability",
+    "rootNamespace": "",
     "references": [
-        "GUID:c334b22065f9cdc449066c3695fc187d",
-        "GUID:e8168c3bcc3303343b38257948a317ac",
         "GUID:9e24947de15b9834991c9d8411ea37cf",
         "GUID:84651a3751eca9349aac36a66bba901b",
         "GUID:68da9576cc9c2664a992145038f473bf",
         "GUID:07c2f6d10c9213843ad69e3867f84045",
-        "GUID:fbd508862d54488429f3c52bbf23b269",
-        "GUID:b2c2b271ab43a1c428f71d4a96a67e82"
+        "GUID:fbd508862d54488429f3c52bbf23b269"
     ],
-    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
     "versionDefines": [],
-    "allowUnsafeCode": false
+    "noEngineReferences": false
 }
