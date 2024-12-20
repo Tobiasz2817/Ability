@@ -26,7 +26,7 @@ namespace Ability {
                 return Abilities;
             
             var config = abilityConfig ?? Config;
-            var abilities = (await AddressableLoad.Import<AbilityData>(SearchType.Value, config.LabelKey)).ToArray();
+            var abilities = (await AddressableLoad.Import<AbilityData>(SearchType.Inside, config.LabelKey)).ToArray();
             SortAbilities(ref abilities);
 
             Abilities = abilities;
